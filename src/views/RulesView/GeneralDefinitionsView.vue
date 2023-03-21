@@ -68,7 +68,7 @@ export default class GeneralDefinitionsView extends Vue {
 <style scoped lang="scss">
 .general-view {
   max-width: 886px;
-  height: 950px;
+  max-height: 950px;
   color: #333333;
   padding-left: 120px;
   .general {

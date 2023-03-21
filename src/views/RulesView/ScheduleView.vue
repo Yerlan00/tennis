@@ -27,27 +27,16 @@ import ViewLiComponent from "@/components/About/ViewLi.vue";
 export default class GeneralView extends Vue {
   itemsList = [
     {
-      title: "4.1. Тарифы на использование теннисного корта:",
+      title: "3.1. Разовое посещение:",
       description: "",
       subTitles: {
-        subOne: "Аренда теннисного корта 1 час;",
-        subTwo: "Аренда теннисного корта 1.5 час",
+        subOne: "Разовое посещение;",
+        subTwo: "Абонементы с фиксированным временем;",
         subThree: "Абонементы на 30 и 50 часов;",
         subFour: "Индивидуальные занятия с тренером;",
         subFive: "«Клуб любителей тенниса»;",
         subSix: "Детские группы разных возрастов и уровня подготовки;",
         subSeven: "Взрослые группы",
-      },
-    },
-    {
-      title: "4.2. Прочие услуги при аренде теннисных кортов:",
-      description: "",
-      subTitles: {
-        subOne: "Аренда теннисных ракеток;",
-        subTwo: "Аренда теннисной пушки + 120 мячей;",
-        subThree: "Абонемента — 30 часов;",
-        subFour:
-          "Занятия с тренером в группах (детских/взрослых) — согласно действующего расписания групп.",
       },
     },
   ];
@@ -57,7 +46,7 @@ export default class GeneralView extends Vue {
 <style scoped lang="scss">
 .general-view {
   max-width: 886px;
-  height: 950px;
+  max-height: 950px;
   color: #333333;
   padding-left: 120px;
   .general {

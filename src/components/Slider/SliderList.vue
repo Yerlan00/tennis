@@ -8,6 +8,7 @@
       :disable-left="!this.offset"
       :disable-right="this.offset >= this.maxSliderLineWidth"
     />
+
     <div class="slider-items">
       <div class="slider-items-line" ref="sliderItems">
         <template>

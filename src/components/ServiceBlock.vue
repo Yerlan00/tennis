@@ -25,7 +25,7 @@ export default class extends Vue {}
 <style scoped lang="scss">
 .service-block {
   background-color: #8d86c9;
-  padding: 35px 49px 35px 35px;
+  padding: 30px 49px 30px 35px;
   color: #fff;
   &__title {
     font-weight: 600;

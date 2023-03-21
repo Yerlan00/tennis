@@ -1,7 +1,7 @@
 <template>
-  <div class="abot-block-wrapper">
+  <div class="about-block-wrapper">
     <div
-      class="abot-block"
+      class="about-block"
       :style="{
         width: '376px',
         height: '450px',
@@ -10,7 +10,7 @@
         backgroundPosition: 'center',
       }"
     >
-      <h3 class="abot-block__title">
+      <h3 class="about-block__title">
         {{ title }}
       </h3>
     </div>
@@ -30,20 +30,18 @@ export default class extends Vue {}
 </script>
 
 <style scoped lang="scss">
-.abot-block-wrapper {
+.about-block-wrapper {
   width: 416px;
   height: 500px;
-  border: 1px solid rgba(172, 255, 47, 0.345);
+  border: 1px solid #f7ece1;
   padding: 25px 20px;
 }
-.abot-block {
+.about-block {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   padding-bottom: 40px;
-  // text-align: center;
-  // padding: 334px 72px 40px 72px;
 
   h3 {
     color: #fff;

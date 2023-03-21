@@ -24,7 +24,8 @@ export default class HomeView extends Vue {}
 
 <style lang="scss">
 @import "./assets/scss/_shared.scss";
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;

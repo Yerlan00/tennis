@@ -80,7 +80,7 @@
 
     <section class="rules">
       <ContainerComponent>
-        <titleComponent title="Правила" />
+        <TitleComponent title="Правила" />
       </ContainerComponent>
       <ContainerComponent :style-type="containerType.FLEX">
         <div class="about-sidebar">

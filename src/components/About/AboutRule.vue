@@ -1,6 +1,6 @@
 <template>
   <div class="rule">
-    <router-link :to="rule.link">
+    <router-link tag="a" :to="rule.link">
       <h4>{{ numberOfRule }} {{ rule.title }}</h4>
     </router-link>
     <AboutRuleComponent
@@ -29,14 +29,26 @@ export default class AboutRuleComponent extends Vue {}
 .rule {
   max-width: 340px;
   margin-bottom: 40px;
+  a {
+    font-size: 21px;
+    font-weight: 600;
+    color: #333;
+    &.router-link-exact-active.router-link-active {
+      color: #8d86c9;
+      h4 {
+        margin-left: 40px;
+        transition: 0.3s;
+      }
+    }
+  }
 }
 .rule > .rule {
   margin-left: 5px;
   color: red;
 }
-h4 {
-  font-size: 21px;
-  font-weight: 600;
-  color: #333333;
-}
+// h4 {
+//   font-size: 21px;
+//   font-weight: 600;
+//   // color: #333333;
+// }
 </style>

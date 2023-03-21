@@ -47,7 +47,7 @@
                 <img :src="item.image" :alt="item.title" />
               </div>
               <div class="coach-item-title">
-                {{ index + 1 }}:{{ item.title }}
+                {{ item.title }}
               </div>
               <div class="coach-item-description">{{ item.description }}</div>
             </div>
@@ -55,37 +55,10 @@
         </SliderListComponent>
       </ContainerComponent>
     </section>
+
     <section class="prices">
       <ContainerComponent>
-        <!-- <PriceLinkComponent>
-          <div
-            class="price-link"
-            v-for="(item, index) in priceLinks"
-            :key="index"
-          >
-					<router-link tag="a" :to="item.routUrl">{{
-              photo.routTitle
-            }}</router-link>
-					</div>
-        </PriceLinkComponent> -->
-        <SliderListComponent
-          title="Фото кортов"
-          :items-count-toShow="1"
-          :max-items-length="priceItems.length"
-        >
-          <div
-            class="prices-slide-item"
-            v-for="(photo, index) in priceItems"
-            :key="index"
-            :style="{
-              backgroundImage: 'url(' + photo.image + ')',
-            }"
-          >
-            <router-link tag="a" :to="photo.routUrl">{{
-              photo.routTitle
-            }}</router-link>
-          </div>
-        </SliderListComponent>
+        <PriceServiceComponent />
       </ContainerComponent>
     </section>
   </div>
@@ -100,6 +73,8 @@ import { ContainerType } from "@/components/Container.vue";
 import AboutBlockComponent from "@/components/AboutBlock.vue";
 import SportClubComponent from "@/components/SportClub.vue";
 import SliderListComponent from "@/components/Slider/SliderList.vue";
+import TitleComponent from "@/components/Title.vue";
+import PriceServiceComponent from "@/components/PriceAndService/PriceServiceblock.vue";
 
 @Component({
   components: {
@@ -108,6 +83,8 @@ import SliderListComponent from "@/components/Slider/SliderList.vue";
     AboutBlockComponent,
     SportClubComponent,
     SliderListComponent,
+    TitleComponent,
+    PriceServiceComponent,
   },
 })
 export default class HomeView extends Vue {
@@ -156,48 +133,6 @@ export default class HomeView extends Vue {
         "Bibendum aliquam volutpat nisl a duis in nisi. In sed commodo lorem morbi quis.",
     },
     {
-      image: require("../assets/img/slider-item2.jpg"),
-      title: "Pretium odio",
-      description:
-        "Bibendum aliquam volutpat nisl a duis in nisi. In sed commodo lorem morbi quis.",
-    },
-    {
-      image: require("../assets/img/slider-item2.jpg"),
-      title: "Pretium odio",
-      description:
-        "Bibendum aliquam volutpat nisl a duis in nisi. In sed commodo lorem morbi quis.",
-    },
-    {
-      image: require("../assets/img/slider-item2.jpg"),
-      title: "Pretium odio",
-      description:
-        "Bibendum aliquam volutpat nisl a duis in nisi. In sed commodo lorem morbi quis.",
-    },
-    {
-      image: require("../assets/img/slider-item2.jpg"),
-      title: "Pretium odio",
-      description:
-        "Bibendum aliquam volutpat nisl a duis in nisi. In sed commodo lorem morbi quis.",
-    },
-    {
-      image: require("../assets/img/slider-item2.jpg"),
-      title: "Pretium odio",
-      description:
-        "Bibendum aliquam volutpat nisl a duis in nisi. In sed commodo lorem morbi quis.",
-    },
-    {
-      image: require("../assets/img/slider-item2.jpg"),
-      title: "Pretium odio",
-      description:
-        "Bibendum aliquam volutpat nisl a duis in nisi. In sed commodo lorem morbi quis.",
-    },
-    {
-      image: require("../assets/img/slider-item2.jpg"),
-      title: "Pretium odio",
-      description:
-        "Bibendum aliquam volutpat nisl a duis in nisi. In sed commodo lorem morbi quis.",
-    },
-    {
       image: require("../assets/img/slider-item3.jpg"),
       title: "Aliquet consectetur",
       description: "Id sapien sed nibh fermentum massa posuere ipsum. Diam in.",
@@ -235,41 +170,6 @@ export default class HomeView extends Vue {
       description: "Quis ullamcorper pretium lacus risus tellus dolor etiam. ",
     },
   ];
-  priceItems = [
-    {
-      image: require("../assets/img/price-image.jpg"),
-      routUrl: "/",
-      routTitle: "Уютное кафе",
-    },
-    {
-      image: require("../assets/img/price-image.jpg"),
-      routUrl: "/",
-      routTitle: "Уютное кафе",
-    },
-    {
-      image: require("../assets/img/price-image.jpg"),
-      routUrl: "/",
-      routTitle: "Уютное кафе",
-    },
-  ];
-  // priceLinks = [
-  //   {
-  //     routUrl: "/",
-  //     routTitle: "Зимний сезон 2021-2022",
-  //   },
-  //   {
-  //     routUrl: "/",
-  //     routTitle: "Абонементы",
-  //   },
-  //   {
-  //     routUrl: "/",
-  //     routTitle: "Скидки",
-  //   },
-  //   {
-  //     routUrl: "/",
-  //     routTitle: "Дополнительные услуги",
-  //   },
-  // ];
 }
 </script>
 
@@ -306,6 +206,7 @@ export default class HomeView extends Vue {
 
     text-align: center;
     img {
+      margin-bottom: -5px;
       width: 100%;
     }
   }
@@ -326,26 +227,4 @@ export default class HomeView extends Vue {
     color: #333333;
   }
 }
-.prices-slide-item {
-  border: 1px solid #f7ece1;
-  // padding: 5px;
-  min-width: 100%;
-  height: 450px;
-  position: relative;
-  a {
-    position: absolute;
-    left: 50px;
-    bottom: 50px;
-    // background-color: #8d86c9;
-    padding: 10px 20px;
-    font-weight: 600;
-    font-size: 18px;
-    color: #fff;
-  }
-}
-// 	.price-link {
-
-// 	}
-// 	.price-link:
-// }
 </style>

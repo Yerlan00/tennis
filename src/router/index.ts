@@ -27,27 +27,28 @@ const routes: Array<RouteConfig> = [
     children: [
       {
         path: "general",
-        component: () => import("../views/GeneralView.vue"),
+        component: () => import("../views/RulesView/GeneralView.vue"),
       },
       {
         path: "general-definitions",
-        component: () => import("../views/GeneralDefinitionsView.vue"),
+        component: () =>
+          import("../views/RulesView/GeneralDefinitionsView.vue"),
       },
       {
         path: "schedule",
-        component: () => import("../views/ScheduleView.vue"),
+        component: () => import("../views/RulesView/ScheduleView.vue"),
       },
       {
         path: "pay",
-        component: () => import("../views/PayView.vue"),
+        component: () => import("../views/RulesView/PayView.vue"),
       },
       {
         path: "rules-on-place",
-        component: () => import("../views/RulesOnplaceView.vue"),
+        component: () => import("../views/RulesView/RulesOnplaceView.vue"),
       },
       {
         path: "other",
-        component: () => import("../views/OtherView.vue"),
+        component: () => import("../views/RulesView/OtherView.vue"),
       },
     ],
   },
